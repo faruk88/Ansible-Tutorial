@@ -1,0 +1,25 @@
+Preference of ansible.cfg file :-
+===============================
+
+1) Using /etc/ansible/ansible.cfg
+
+This is the default configuration file.
+This file is used if no other configuration file is found.
+
+2) Using ~/.ansible.cfg file
+
+Ansible looks for a  ~/.ansible.cfg in the users home directory.
+This configuretion is used instead of the /etc/ansible/ansible.cfg if it exists.
+
+3) Using ./ansible.cfg file
+
+If an ansible.cfg file exists in the directory in which the ansible command is executed, it is used instead of the global file or the user's personel file.
+
+4) Using $ANSIBLE_CONFIG environment file
+
+When the environment variable is defined, Ansible uses the configuration file that the variable specifies instead of any of the
+previously mentioned configuration files.
+
+
+
+
