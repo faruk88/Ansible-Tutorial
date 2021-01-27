@@ -1,0 +1,26 @@
+[defaults]
+
+inventory = ./inventory
+remote_user = devops
+ask_pass = false
+
+[privilege_escalation]
+
+become = true
+become_method = sudo
+become_user = root
+become_ask_pass = false
+
+** remote_user should be present in the managed hosts
+with sudo permission given below.
+
+[in managed hosts]
+
+#useradd devops
+#passwd devops
+#cd /etc/sudoers.d
+#vim devops
+
+devops	ALL=(ALL)	NOPASSWD: ALL
+
+You can add user by adding in kickstart file's post installation section and configure sudo permission.
