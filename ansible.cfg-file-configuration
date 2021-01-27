@@ -1,3 +1,5 @@
+ansible.cfg file :-
+
 [defaults]
 
 inventory = ./inventory
