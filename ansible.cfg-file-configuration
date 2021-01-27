@@ -26,3 +26,24 @@ with sudo permission given below.
 devops	ALL=(ALL)	NOPASSWD: ALL
 
 You can add user by adding in kickstart file's post installation section and configure sudo permission.
+
+inventory file is in present working directory. inventory file looks like this.
+
+
+vim inventory
+
+managed01.example.com
+managed02.example.com
+
+[web]
+
+managed01.example.com
+
+[dev]
+
+managed02.example.com
+
+[asia:children]
+
+web
+dev
